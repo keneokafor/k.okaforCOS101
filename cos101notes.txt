@@ -1,0 +1,8 @@
+compile codes in rust; rustc filename.rs
+run codes in rust; .\filename.exe
+
+check cargo version 
+$cargo --version
+ 
+cargo build will build the app
+cargo run will run the app
