@@ -1,0 +1,29 @@
+use std::io::Write;
+
+fn main() {
+    let lager = vec!["33 Export\n".to_string(), "Desperados\n".to_string(), "Goldberg\n".to_string(), "Gulder\n".to_string(), "Heineken\n".to_string(), "Star\n".to_string()];
+    let stout = vec!["Legend\n".to_string(), "Turbo King\n".to_string(), "Williams\n".to_string()];
+    let non_alcoholic = vec!["Maltina\n".to_string(), "Amstel Malta\n".to_string(), "Malta Gold\n".to_string(), "Fayrouz\n".to_string()];
+
+    let mut file = std::fs::File::create("Heineken Drink Categories.txt").expect("Failed to create file");
+
+    file.write_all("LAGER DRINKS:\n\n".as_bytes()).expect("Failed to write");
+
+    for index in 0..lager.len() {
+        file.write_all(lager[index].as_bytes()).expect("Failed to write into file");
+
+    }
+
+    file.write_all("\nSTOUT DRINKS:\n\n".as_bytes()).expect("Failed to write");
+
+    for index in 0..stout.len() {
+        file.write_all(stout[index].as_bytes()).expect("Failed to write into file");
+
+    }
+
+    file.write_all("\nNON-ALCOHOLIC DRINKS:\n\n".as_bytes()).expect("Failed to write");
+
+    for index in 0..non_alcoholic.len() {
+        file.write_all(non_alcoholic[index].as_bytes()).expect("Failed to write");
+    }
+}

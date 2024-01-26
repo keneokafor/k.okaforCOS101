@@ -1,0 +1,7 @@
+start
+input patient details
+input values
+assign variables to prices
+calculate discount of each price
+assign variables to each discount price
+print out according to each statement given
